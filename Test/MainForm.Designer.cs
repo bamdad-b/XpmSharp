@@ -75,9 +75,9 @@
             // 
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(719, 0);
+            panel1.Location = new Point(279, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(81, 450);
+            panel1.Size = new Size(81, 202);
             panel1.TabIndex = 3;
             // 
             // panel2
@@ -86,7 +86,7 @@
             panel2.Controls.Add(buttonClear);
             panel2.Controls.Add(loadButton);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 363);
+            panel2.Location = new Point(0, 115);
             panel2.Name = "panel2";
             panel2.Size = new Size(81, 87);
             panel2.TabIndex = 4;
@@ -96,10 +96,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(360, 202);
             Controls.Add(panel1);
             Name = "MainForm";
-            Text = "Form1";
+            Text = "MainForm";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ResumeLayout(false);

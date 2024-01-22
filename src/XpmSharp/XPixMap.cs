@@ -24,13 +24,17 @@ namespace B2.XpmSharp
             CharData = XpmHelper.AssignPixels(XmpValues);
         }
 
+        Color[,]? _colors;
         public Color[,] GetColors()
         {
-            var colors = new Color[XmpValues.Height, XmpValues.Width];
+            if (_colors != null)
+                return _colors;
+
+            _colors = new Color[XmpValues.Height, XmpValues.Width];
             for (var i = 0; i < XmpValues.Height; i++)
                 for (var j = 0; j < XmpValues.Width; j++)
-                    colors[i, j] = ColorChars[CharData[i, j]];
-            return colors;
+                    _colors[i, j] = ColorChars[CharData[i, j]];
+            return _colors;
         }
     }
 }
