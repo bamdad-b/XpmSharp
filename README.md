@@ -5,7 +5,7 @@ This library loads **XPM v3** files into `XPixMap` objects for reading purposes 
 
 The `XPixMap` then can be used to get meaningful info about the XPM, like `Width`, `Height`, `Hotspot` (if present) and the pixel matrix by calling `GetColors()` returning a `Color[,]`.  
 Additionally, the Extensions method `GetBitmap()` can be used to convert the XPM to a `System.Drawing.Common.Bitmap` object.
-```
+```cs
 var xpm = XPixMap.FromFile(@"C:\path\to\image.xpm");
 var bmp = xpm.GetBitmap();
 //Edit the image
@@ -15,7 +15,7 @@ bmp.SetPixel(0, 1, Color.White);
 bmp.Save(@"C:\path\to\image.png", System.Drawing.Imaging.ImageFormat.Png);
 ```
 There is also a `DrawOn()` extension method which allows you to draw the XPM on a surface. (For example, a windows form handle)
-```
+```cs
 using var stream = openFileDialog.OpenFile();
 var xpm = XPixMap.FromStream(stream);
 xpm.DrawOn(Handle);
